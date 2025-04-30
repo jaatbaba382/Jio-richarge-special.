@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jio Recharge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <img src="jio-logo.png" alt="Jio" class="logo" />
+    <input type="text" placeholder="Search" class="search-bar" />
+  </div>
+
+  <div class="center-logo">
+    <img src="jio-round.png" alt="Jio" />
+  </div>
+
+  <div class="recharge-box">
+    <h2>Mobile Recharge</h2>
+    <label>Operator</label>
+    <select>
+      <option>Jio Prepaid</option>
+      <option>Jio Postpaid</option>
+    </select>
+
+    <label>Mobile Number</label>
+    <input type="text" placeholder="Enter 10 digit mobile number" />
+
+    <button onclick="showQRCode()">Recharge</button>
+  </div>
+
+  <div id="qr-popup" class="qr-popup">
+    <img src="your-qr.png" alt="QR Code" />
+  </div>
+
+  <script>
+    function showQRCode() {
+      document.getElementById("qr-popup").style.display = "block";
+    }
+  </script>
+</body>
+</html<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recharge Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0041e6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 70px;
+    }
+    .search-bar {
+      padding: 10px;
+      text-align: center;
+      background: #0041e6;
+    }
+    .search-bar input {
+      width: 300px;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+    }
+    .recharge-form {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .offer-card {
+      background: white;
+      margin: 15px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      border: 1px solid #ddd;
+    }
+    .offer-card h3 {
+      margin: 0;
+      color: #0041e6;
+    }
+    .offer-details {
+      margin: 10px 0;
+    }
+    .btn {
+      background-color: #0041e6;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #qrPopup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      padding-top: 100px;
+    }
+    #qrPopup img {
+      width: 200px;
+    }
+    #qrPopup h2 {
+      color: white;
+    }
+    #qrPopup .btn {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Jio_Logo.png" alt="Jio Logo">
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search">
+  </div>
+
+  <div class="recharge-form">
+    <h3>Mobile Recharge</h3>
+    <select>
+      <option>Jio Prepaid</option>
+    </select><br><br>
+    <input type="text" placeholder="Enter 10 digit mobile number" style="width: 100%; padding: 10px; border-radius: 5px;"><br><br>
+    <button class="btn">Recharge</button>
+  </div>
+
+  <!-- Offers -->
+  <div class="offer-card">
+    <h3>₹149 <del>₹666</del></h3>
+    <div class="offer-details">1.5 GB/day, 84 days, Unlimited Calls, 100 SMS/day</div>
+    <button class="btn" onclick="showQR()">Recharge</button>
+  </div>
+
+  <div class="offer-card">
+    <h3>₹199 <del>₹999</del></h3>
+    <div class="offer-details">2 GB/day, 84 days, Unlimited Calls, 100 SMS/day</div>
+    <button class="btn" onclick="showQR()">Recharge</button>
+  </div>
+
+  <div class="offer-card">
+    <h3>₹249 <del>₹1499</del></h3>
+    <div class="offer-details">3 GB/day, 84 days, Unlimited Calls, 100 SMS/day</div>
+    <button class="btn" onclick="showQR()">Recharge</button>
+  </div>
+
+  <div class="offer-card">
+    <h3>₹449 <del>₹1999</del></h3>
+    <div class="offer-details">2 GB/day, 6 months, Unlimited Calls</div>
+    <button class="btn" onclick="showQR()">Recharge</button>
+  </div>
+
+  <div class="offer-card">
+    <h3>₹699 <del>₹2499</del></h3>
+    <div class="offer-details">2 GB/day, 12 months, Unlimited Calls</div>
+    <button class="btn" onclick="showQR()">Recharge</button>
+  </div>
+
+  <!-- QR Popup -->
+  <div id="qrPopup">
+    <h2>Scan to Pay</h2>
+    <img src="your-qr.png" alt="Your QR Code">
+    <br>
+    <button class="btn" onclick="hideQR()">Close</button>
+  </div>
+
+  <script>
+    function showQR() {
+      document.getElementById('qrPopup').style.display = 'block';
+    }
+    function hideQR() {
+      document.getElementById('qrPopup').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+
