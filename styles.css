@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.header {
+  background: #0046be;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.search-bar {
+  margin-left: 20px;
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.center-logo {
+  display: flex;
+  justify-content: center;
+  background: #0046be;
+  padding: 20px 0;
+}
+
+.center-logo img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.recharge-box {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.recharge-box h2 {
+  text-align: center;
+  color: #0046be;
+}
+
+.recharge-box label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.recharge-box select, .recharge-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.recharge-box button {
+  width: 100%;
+  padding: 12px;
+  background: #002d9c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.qr-popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.qr-popup img {
+  width: 200px;
+}
